@@ -1,5 +1,17 @@
 .list-group {
   border: 2px solid purple;
+  border-radius: .25px;
   margin: 1em 1em 1em 1em;
   display: inline-block;
 }
+
+#map {
+        height: 200px;
+        width: 300px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      /* html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      } */
