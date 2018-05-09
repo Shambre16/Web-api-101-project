@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container-fluid enclose">
+      <nav class="navbar navbar-light bg-light">
+        <form>
+          <div class="form-row">
+            <div class="col-4">
+              <input class="form-control mr-sm-2" id="numberInput" name="page" min="1" max="500" type="number" placeholder="Number of Results" aria-label="Search">
+            </div>
+            <div class="col-3">
+              <input type="text" class="form-control" id="stateInput" name="state" maxlength="2" placeholder="State">
+            </div>
+            <div class="col-3">
+              <input type="text" class="form-control" id="countryInput" name="country" maxlength="2" placeholder="Country">
+            </div>
+            <button class="btn btn-outline-success my-2 my-sm-0" id="searchBtn" type="submit">Search</button>
+          </div>
+        </form>
+      </nav>
+      <h1>Your Search Results:</h1>
+      <div class="card-deck">
+        <div class="card card-group clone-card">
+          <div class="card-body" id="displayResults">
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="js/jquery.js" charset="utf-8"></script>
+  <script src="js/bootstrap.bundle.js" charset="utf-8"></script>
+  <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
