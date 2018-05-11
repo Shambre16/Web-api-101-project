@@ -61,9 +61,9 @@ getObject(instanceKey) {
   if (response) {
     for (let i = 0; i < response.length; i++) {
       let result = response[i];
-      console.log(result);
+      return result;
     }
-    return true;
+    console.log(true);
   }
 }
 }
@@ -79,4 +79,5 @@ class Map {
 $(document).ready(function() {
   var DataRequestModule = new DataRequest("meetupResults","482a804c7b4414151e743a1a7b1f5156");
   DataRequestModule.init();
+  DataRequestModule.getObject("meetupResults");
 })
