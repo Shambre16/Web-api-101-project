@@ -17,7 +17,6 @@ class DataRequest {
   return false;
 }
 
-
 bindEvents() {
   $("#searchBtn").on("click", $.proxy(this.refreshData, this));
 
@@ -39,7 +38,6 @@ refreshData(event) {
     })
 };
 
-
 successfulQuery(response) {
   localStorage.setItem("meetupResults", JSON.stringify(response.results));
   var singleResponseArray = "";
@@ -55,25 +53,19 @@ successfulQuery(response) {
       <li class='list-group-item state'>State:<span></span> ${response.results[i].state} </li>
       <li class='list-group-item member_count'>Member Count:<span></span> ${response.results[i].member_count} </li></ul>`;
   }
-
   $("#displayResults").append(singleResponseArray);
-
 }
-
-
-
 
 getObject(instanceKey) {
   let response = JSON.parse(localStorage.getItem("meetupResults"));
   if (response) {
     for (let i = 0; i < response.length; i++) {
       let result = response[i];
-      console.log(result);
+      return result;
     }
-    return true;
+    console.log(true);
   }
 }
-
 }
 
 class Map {
@@ -87,4 +79,5 @@ class Map {
 $(document).ready(function() {
   var DataRequestModule = new DataRequest("meetupResults","482a804c7b4414151e743a1a7b1f5156");
   DataRequestModule.init();
+  DataRequestModule.getObject("meetupResults");
 })
